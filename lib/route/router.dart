@@ -22,7 +22,7 @@ bool authState = false;
 
 final router = GoRouter(
   redirect: (context, state) {
-    if (state.location == '/login/private' && !authState) {
+    if (state.uri.toString() == '/login/private' && !authState) {
       // return path -> 해당 라우트로 이동
       // return null -> 원래 이동하려던 곳으로 이동
       return '/login';

@@ -10,7 +10,8 @@ class QueryParamScreen extends StatelessWidget {
     return DefaultLayout(
       body: ListView(
         children: [
-          Text('Query Parameter ${GoRouterState.of(context).queryParameters}'),
+          Text(
+              'Query Parameter ${GoRouterState.of(context).uri.queryParameters}'),
           ElevatedButton(
             onPressed: () {
               context.push(

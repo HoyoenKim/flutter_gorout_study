@@ -13,7 +13,7 @@ class DefaultLayout extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          GoRouterState.of(context).location,
+          GoRouterState.of(context).uri.toString(),
         ),
       ),
       body: Padding(

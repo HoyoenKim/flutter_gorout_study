@@ -9,9 +9,9 @@ class NestedScreen extends StatelessWidget {
   });
 
   int getIndex(BuildContext context) {
-    if (GoRouterState.of(context).location == '/nested/a') {
+    if (GoRouterState.of(context).uri.toString() == '/nested/a') {
       return 0;
-    } else if (GoRouterState.of(context).location == '/nested/b') {
+    } else if (GoRouterState.of(context).uri.toString() == '/nested/b') {
       return 1;
     } else {
       return 2;
@@ -22,7 +22,7 @@ class NestedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(GoRouterState.of(context).location),
+        title: Text(GoRouterState.of(context).uri.toString()),
       ),
       body: child,
       bottomNavigationBar: BottomNavigationBar(
